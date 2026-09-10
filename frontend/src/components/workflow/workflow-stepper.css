@@ -1,0 +1,153 @@
+.workflow-stepper {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: var(--space-2) var(--space-3) var(--space-2);
+    color: var(--text-primary);
+}
+
+.workflow-stepper__track {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.workflow-stepper__item {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding-bottom: var(--space-4);
+}
+
+.workflow-stepper__connector {
+    position: absolute;
+    top: 0.85rem;
+    right: 50%;
+    width: 100%;
+    height: 2px;
+    z-index: 0;
+}
+
+.workflow-stepper__connector--complete {
+    background: var(--status-active);
+}
+
+.workflow-stepper__connector--upcoming {
+    background: var(--border);
+}
+
+.workflow-stepper__connector--rejected {
+    background: var(--status-rejected);
+}
+
+.workflow-stepper__marker {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--surface);
+    color: var(--surface);
+    font-size: 0.75rem;
+}
+
+.workflow-stepper__marker--complete {
+    background: var(--status-active);
+    border-color: var(--status-active);
+    color: #fff;
+}
+
+.workflow-stepper__marker--current {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-width: 3px;
+    border-color: var(--accent);
+    background: var(--surface);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.workflow-stepper__marker--upcoming {
+    opacity: 0.55;
+    background: transparent;
+}
+
+.workflow-stepper__marker--rejected {
+    background: var(--status-rejected);
+    border-color: var(--status-rejected);
+    color: #fff;
+}
+
+.workflow-stepper__label {
+    margin-top: 0.55rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.25;
+}
+
+.workflow-stepper__item--current .workflow-stepper__label {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.workflow-stepper__item--complete .workflow-stepper__label {
+    color: var(--status-active);
+    font-weight: 600;
+}
+
+.workflow-stepper__item--upcoming .workflow-stepper__label {
+    opacity: 0.7;
+}
+
+.workflow-stepper__item--rejected .workflow-stepper__label {
+    color: var(--status-rejected);
+    font-weight: 700;
+}
+
+.workflow-stepper__branch {
+    position: absolute;
+    top: 3.15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workflow-stepper__branch-line {
+    width: 2px;
+    height: 0.7rem;
+    background: var(--status-rejected);
+}
+
+.workflow-stepper__branch-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--status-rejected);
+    white-space: nowrap;
+}
+
+.workflow-stepper__caption {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+    color: var(--status-rejected);
+}
+
+@media (max-width: 768px) {
+    .workflow-stepper__label {
+        font-size: 0.7rem;
+    }
+
+    .workflow-stepper__branch-label {
+        white-space: normal;
+        text-align: center;
+        max-width: 6.5rem;
+    }
+}

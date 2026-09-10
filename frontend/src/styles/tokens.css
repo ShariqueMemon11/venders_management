@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #F7F8FA;
+  --surface: #FFFFFF;
+  --border: #E2E5EA;
+  --text-primary: #14171F;
+  --text-secondary: #5B6270;
+  --accent: #2A5D9F;
+  --status-active: #1F8A5F;
+  --status-pending: #B7791F;
+  --status-draft: #6B7280;
+  --status-rejected: #C1392B;
+
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --bg-rgb: 247, 248, 250;
+  --surface-rgb: 255, 255, 255;
+  --text-primary-rgb: 20, 23, 31;
+  --text-secondary-rgb: 91, 98, 112;
+  --accent-rgb: 42, 93, 159;
+  --status-active-rgb: 31, 138, 95;
+  --status-pending-rgb: 183, 121, 31;
+  --status-draft-rgb: 107, 114, 128;
+  --status-rejected-rgb: 193, 57, 43;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --sidebar-width: 250px;
+}
+
+[data-theme="dark"] {
+  --bg: #0F1115;
+  --surface: #171A21;
+  --border: #262B35;
+  --text-primary: #E6E8EC;
+  --text-secondary: #9096A5;
+  --accent: #5B8DEF;
+  --status-active: #3FBE85;
+  --status-pending: #D9A441;
+  --status-draft: #8B92A3;
+  --status-rejected: #E0685A;
+
+  --bg-rgb: 15, 17, 21;
+  --surface-rgb: 23, 26, 33;
+  --text-primary-rgb: 230, 232, 236;
+  --text-secondary-rgb: 144, 150, 165;
+  --accent-rgb: 91, 141, 239;
+  --status-active-rgb: 63, 190, 133;
+  --status-pending-rgb: 217, 164, 65;
+  --status-draft-rgb: 139, 146, 163;
+  --status-rejected-rgb: 224, 104, 90;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+}
+
+:root,
+[data-theme="light"],
+[data-theme="dark"] {
+  --bs-body-bg: var(--bg);
+  --bs-body-bg-rgb: var(--bg-rgb);
+  --bs-body-color: var(--text-primary);
+  --bs-body-color-rgb: var(--text-primary-rgb);
+  --bs-emphasis-color: var(--text-primary);
+  --bs-emphasis-color-rgb: var(--text-primary-rgb);
+  --bs-secondary-color: var(--text-secondary);
+  --bs-secondary-color-rgb: var(--text-secondary-rgb);
+  --bs-tertiary-color: var(--text-secondary);
+  --bs-heading-color: var(--text-primary);
+  --bs-link-color: var(--accent);
+  --bs-link-color-rgb: var(--accent-rgb);
+  --bs-link-hover-color: var(--accent);
+  --bs-border-color: var(--border);
+  --bs-border-color-translucent: var(--border);
+
+  --bs-primary: var(--accent);
+  --bs-primary-rgb: var(--accent-rgb);
+  --bs-success: var(--status-active);
+  --bs-success-rgb: var(--status-active-rgb);
+  --bs-warning: var(--status-pending);
+  --bs-warning-rgb: var(--status-pending-rgb);
+  --bs-danger: var(--status-rejected);
+  --bs-danger-rgb: var(--status-rejected-rgb);
+  --bs-secondary: var(--status-draft);
+  --bs-secondary-rgb: var(--status-draft-rgb);
+  --bs-info: var(--accent);
+  --bs-info-rgb: var(--accent-rgb);
+  --bs-light: var(--surface);
+  --bs-light-rgb: var(--surface-rgb);
+  --bs-dark: var(--text-primary);
+  --bs-dark-rgb: var(--text-primary-rgb);
+
+  --bs-tertiary-bg: var(--surface);
+  --bs-secondary-bg: var(--surface);
+  --bs-secondary-bg-rgb: var(--surface-rgb);
+
+  --bs-card-bg: var(--surface);
+  --bs-card-cap-bg: var(--surface);
+  --bs-card-border-color: var(--border);
+  --bs-card-color: var(--text-primary);
+
+  --bs-table-bg: var(--surface);
+  --bs-table-color: var(--text-primary);
+  --bs-table-border-color: var(--border);
+  --bs-table-striped-bg: color-mix(in srgb, var(--bg) 70%, var(--surface));
+  --bs-table-hover-bg: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  --bs-table-hover-color: var(--text-primary);
+
+  --bs-modal-bg: var(--surface);
+  --bs-modal-color: var(--text-primary);
+  --bs-modal-border-color: var(--border);
+  --bs-modal-footer-bg: var(--surface);
+  --bs-modal-footer-border-color: var(--border);
+  --bs-modal-header-border-color: var(--border);
+}

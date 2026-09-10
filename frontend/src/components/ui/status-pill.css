@@ -1,0 +1,33 @@
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.status-pill__dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+}
+
+.status-pill--active {
+    color: var(--status-active);
+}
+
+.status-pill--pending {
+    color: var(--status-pending);
+}
+
+.status-pill--draft {
+    color: var(--status-draft);
+}
+
+.status-pill--rejected {
+    color: var(--status-rejected);
+}

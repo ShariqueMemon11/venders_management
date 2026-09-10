@@ -1,0 +1,30 @@
+# Build / IDE
+bin/
+obj/
+.vs/
+
+# Local secrets — never commit
+**/appsettings.*.local.json
+**/secrets.json
+
+# User secrets are stored outside the repo (%APPDATA%/Microsoft/UserSecrets/)
+# but ignore any accidental local copies:
+**/user-secrets.json
+
+# Azurite local blob emulator data
+.azurite/
+**/azurite/
+
+# Database files (local dev)
+*.mdf
+*.ldf
+
+# Local document storage fallback
+**/LocalStorage/
+
+# Node
+node_modules/
+
+# Env files with secrets
+.env.local
+.env.*.local
